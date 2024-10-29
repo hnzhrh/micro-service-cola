@@ -141,7 +141,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [x] Init the project module
 - [ ] Integrate Spring Boot
-- [ ] Integrate COLA
+- [x] Integrate COLA
 - [ ] Integrate middleware
   - [ ] MySQL
   - [ ] Redis
@@ -159,6 +159,8 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] Prometheus
 - [ ] Integrate observability platform
   - [ ] Skywalking
+- [ ] Integrate development tools
+  - [ ] Swagger and Knife4j
 
 See the [open issues](https://github.com/hnzhrh/micro-service-cola/issues) for a full list of proposed features (and known issues).
 

@@ -20,10 +20,12 @@
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <cola.version>5.0.0</cola.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
+            <!--Project modules-->
             <dependency>
                 <groupId>com.erpang</groupId>
                 <artifactId>micro-service-cola-adapter</artifactId>
@@ -49,7 +51,45 @@
                 <artifactId>micro-service-cola-infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>
+            <!--Project modules end-->
+
+            <!--COLA-->
+            <dependency>
+                <groupId>com.alibaba.cola</groupId>
+                <artifactId>cola-components-bom</artifactId>
+                <version>${cola.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!--COLA end-->
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <artifactId>maven-resources-plugin</artifactId>
+                    <version>3.3.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-compiler-plugin</artifactId>
+                    <version>3.10.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-source-plugin</artifactId>
+                    <version>3.2.1</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-javadoc-plugin</artifactId>
+                    <version>3.4.0</version>
+                </plugin>
+                <plugin>
+                    <artifactId>maven-deploy-plugin</artifactId>
+                    <version>3.0.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+    </build>
 
 </project>
