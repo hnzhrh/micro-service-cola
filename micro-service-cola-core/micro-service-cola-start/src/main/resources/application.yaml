@@ -3,7 +3,5 @@ server:
 spring:
   profiles:
     active: local
-  config:
-    import: classpath:datasource-${spring.profiles.active}.yaml
 logging:
   config: classpath:logback/logback-${spring.profiles.active}.xml
