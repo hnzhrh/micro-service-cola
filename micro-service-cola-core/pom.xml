@@ -27,6 +27,7 @@
         <mybatis-plus-starter.version>3.5.7</mybatis-plus-starter.version>
         <mysql-connect-java.version>8.0.26</mysql-connect-java.version>
         <redisson-spring-boot-starter.version>3.37.0</redisson-spring-boot-starter.version>
+        <knife4j.version>4.4.0</knife4j.version>
     </properties>
 
     <dependencies>
@@ -129,6 +130,14 @@
                 <version>${redisson-spring-boot-starter.version}</version>
             </dependency>
             <!--Redis end-->
+
+            <!--Knife4j-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+                <version>${knife4j.version}</version>
+            </dependency>
+            <!--Knife4j end-->
         </dependencies>
     </dependencyManagement>
 

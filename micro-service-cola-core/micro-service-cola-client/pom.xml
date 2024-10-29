@@ -33,6 +33,14 @@
             <scope>provided</scope>
         </dependency>
         <!--JSR 303 end-->
+
+        <!--Knife4j-->
+        <dependency>
+            <groupId>com.github.xiaoymin</groupId>
+            <artifactId>knife4j-openapi3-jakarta-spring-boot-starter</artifactId>
+            <scope>provided</scope>
+        </dependency>
+        <!--Knife4j end-->
     </dependencies>
 
 </project>
