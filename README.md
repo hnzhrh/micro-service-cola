@@ -139,7 +139,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Init the project module
+- [x] Init the project module
 - [ ] Integrate Spring Boot
 - [ ] Integrate COLA
 - [ ] Integrate middleware
