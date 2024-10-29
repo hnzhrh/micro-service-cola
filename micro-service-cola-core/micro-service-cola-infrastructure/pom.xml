@@ -25,6 +25,20 @@
             <artifactId>micro-service-cola-domain</artifactId>
         </dependency>
         <!--Module dependencies end-->
+
+        <!--MyBatis plus-->
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-spring-boot3-starter</artifactId>
+        </dependency>
+        <!--MyBatis plus end-->
+
+        <!--MySQL driver-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <!--MySQL driver end-->
     </dependencies>
 
 </project>
