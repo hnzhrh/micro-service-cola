@@ -140,11 +140,11 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 ## Roadmap
 
 - [x] Init the project module
-- [ ] Integrate Spring Boot
+- [x] Integrate Spring Boot
 - [x] Integrate COLA
 - [ ] Integrate middleware
-  - [ ] MySQL
-  - [ ] Redis
+  - [x] MySQL
+  - [x] Redis
   - [ ] RocketMQ
 - [ ] Integrate Spring cloud alibaba.
   - [ ] Nacos
@@ -155,12 +155,12 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [ ] Schedule tasks
   - [ ] Spring schedule tasks.
 - [ ] Integrate monitor
-  - [ ] Spring Boot Actuator
+  - [x] Spring Boot Actuator
   - [ ] Prometheus
 - [ ] Integrate observability platform
   - [ ] Skywalking
 - [ ] Integrate development tools
-  - [ ] Swagger and Knife4j
+  - [x] Swagger and Knife4j
 
 See the [open issues](https://github.com/hnzhrh/micro-service-cola/issues) for a full list of proposed features (and known issues).
 
