@@ -41,6 +41,13 @@
             <scope>test</scope>
         </dependency>
         <!--Spring boot end-->
+
+        <!--Monitor metrics-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--Monitor metrics end-->
     </dependencies>
 
     <build>
