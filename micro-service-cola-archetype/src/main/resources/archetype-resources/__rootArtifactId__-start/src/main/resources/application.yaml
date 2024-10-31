@@ -3,8 +3,25 @@ server:
 spring:
   profiles:
     active: local
+  application:
+    name: micro-service-cola
+  cloud:
+    nacos:
+      discovery:
+        namespace: ${NACOS_DISCOVERY_NAMESPACE:55d4d35b-9d91-4f55-aa17-27f13862d697}
+        group: ${NACOS_DISCOVERY_GROUP:micro-service-cola}
+        server-addr: ${NACOS_HOST:localhost}:8848
+      config:
+        namespace: ${NACOS_CONFIG_NAMESPACE:55d4d35b-9d91-4f55-aa17-27f13862d697}
+        group: ${NACOS_CONFIG_GROUP:micro-service-cola}
+        server-addr: ${NACOS_HOST:localhost}:8848
+        refresh-enabled: true
+  config:
+    import: optional:nacos:${spring.application.name}-${spring.profiles.active}.yaml
 logging:
   config: classpath:logback/logback-${spring.profiles.active}.xml
+  level:
+    root: info
 # springdoc-openapi config
 springdoc:
   swagger-ui:
