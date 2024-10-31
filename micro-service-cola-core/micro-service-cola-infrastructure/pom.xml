@@ -57,6 +57,20 @@
             <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
         </dependency>
         <!--Nacos end-->
+
+        <!--Rocket MQ-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-stream-rocketmq</artifactId>
+            <!--https://github.com/alibaba/spring-cloud-alibaba/issues/3880-->
+            <exclusions>
+                <exclusion>
+                    <groupId>com.alibaba.fastjson2</groupId>
+                    <artifactId>fastjson2</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <!--Rocket MQ end-->
     </dependencies>
 
 </project>
