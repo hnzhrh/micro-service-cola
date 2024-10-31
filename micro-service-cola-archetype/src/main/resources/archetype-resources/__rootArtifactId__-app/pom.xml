@@ -19,11 +19,11 @@
     <dependencies>
         <!--Module dependencies-->
         <dependency>
-            <groupId>com.erpang.scaffold</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-client</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.erpang.scaffold</groupId>
+            <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}-infrastructure</artifactId>
         </dependency>
         <!--Module dependencies end-->
