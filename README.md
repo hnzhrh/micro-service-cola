@@ -114,23 +114,35 @@ This project is a scaffold for a **microservice** version of a Maven project bui
 * Nacos v2.3.2 (optional)
 * RocketMQ 5.1.4 (optional)
 
-### Installation TODO
+### Installation
 
 1. Clone the repo
    ```sh
    git clone https://github.com/hnzhrh/micro-service-cola.git
    ```
+2. Install the archetype to local repo
+   ```shell
+   cd ./micro-service-cola-archetype
+   mvn install
+   ```
+Now you can use this archetype to create the new project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
-## Usage TODO
+## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+Before creating your project, please replace `${groupId}`, `${artifactId}`, `${package}`, and `${version}` with your own values.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+```shell
+mvn archetype:generate -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion=1.0.0 -Dpackage=${package} -DarchetypeArtifactId=micro-service-cola-archetype -DarchetypeGroupId=com.erpang -DarchetypeVersion=1.0.0 -DarchetypeCatalog=local
+```
+
+
+
+[//]: # (_For more examples, please refer to the [Documentation]&#40;https://example.com&#41;_)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
