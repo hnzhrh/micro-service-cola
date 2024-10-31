@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author erpang
  * @date 2024/10/29
  */
-@SpringBootApplication(scanBasePackages = {"com.erpang", "com.alibaba.cola"})
+@SpringBootApplication(scanBasePackages = {"com.erpang.scaffold", "com.alibaba.cola"})
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);

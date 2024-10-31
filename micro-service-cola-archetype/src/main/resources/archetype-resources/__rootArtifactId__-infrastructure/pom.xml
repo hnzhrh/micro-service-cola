@@ -19,7 +19,7 @@
     <dependencies>
         <!--Module dependencies-->
         <dependency>
-            <groupId>com.erpang</groupId>
+            <groupId>com.erpang.scaffold</groupId>
             <artifactId>${rootArtifactId}-domain</artifactId>
         </dependency>
         <!--Module dependencies end-->

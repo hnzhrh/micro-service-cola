@@ -3,7 +3,7 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.erpang</groupId>
+    <groupId>com.erpang.scaffold</groupId>
     <artifactId>micro-service-cola-core</artifactId>
     <version>1.0.0</version>
     <packaging>pom</packaging>
@@ -48,27 +48,27 @@
         <dependencies>
             <!--Project modules-->
             <dependency>
-                <groupId>com.erpang</groupId>
+                <groupId>com.erpang.scaffold</groupId>
                 <artifactId>micro-service-cola-adapter</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.erpang</groupId>
+                <groupId>com.erpang.scaffold</groupId>
                 <artifactId>micro-service-cola-app</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.erpang</groupId>
+                <groupId>com.erpang.scaffold</groupId>
                 <artifactId>micro-service-cola-client</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.erpang</groupId>
+                <groupId>com.erpang.scaffold</groupId>
                 <artifactId>micro-service-cola-domain</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.erpang</groupId>
+                <groupId>com.erpang.scaffold</groupId>
                 <artifactId>micro-service-cola-infrastructure</artifactId>
                 <version>${project.version}</version>
             </dependency>

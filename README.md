@@ -137,7 +137,7 @@ Now you can use this archetype to create the new project.
 Before creating your project, please replace `${groupId}`, `${artifactId}`, `${package}`, and `${version}` with your own values.
 
 ```shell
-mvn archetype:generate -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion=1.0.0 -Dpackage=${package} -DarchetypeArtifactId=micro-service-cola-archetype -DarchetypeGroupId=com.erpang -DarchetypeVersion=1.0.0 -DarchetypeCatalog=local
+mvn archetype:generate -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion=1.0.0 -Dpackage=${package} -DarchetypeArtifactId=micro-service-cola-archetype -DarchetypeGroupId=com.erpang.scaffold -DarchetypeVersion=1.0.0 -DarchetypeCatalog=local
 ```
 
 
