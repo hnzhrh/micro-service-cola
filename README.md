@@ -159,9 +159,9 @@ mvn archetype:generate -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion
   - [x] Redis
   - [ ] RocketMQ
 - [ ] Integrate Spring cloud alibaba.
-  - [ ] Nacos
-    - [ ] Config
-    - [ ] Discovery
+  - [x] Nacos
+    - [x] Config
+    - [x] Discovery
   - [ ] Sentinel
   - [ ] Seata
 - [ ] Schedule tasks
