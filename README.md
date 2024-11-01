@@ -157,7 +157,7 @@ mvn archetype:generate -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion
 - [ ] Integrate middleware
   - [x] MySQL
   - [x] Redis
-  - [ ] RocketMQ
+  - [x] RocketMQ
 - [ ] Integrate Spring cloud alibaba.
   - [x] Nacos
     - [x] Config
