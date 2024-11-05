@@ -1,0 +1,594 @@
+{
+  "type": "DIRECTORY",
+  "name": "${project-name}",
+  "directory-type": "PROJECT_ROOT",
+  "children": [
+    {
+      "type": "DIRECTORY",
+      "name": "${root.artifact.id}-client",
+      "directory-type": "MODULE_ROOT",
+      "children": [
+        {
+          "type": "FILE",
+          "name": "pom.xml",
+          "file-type": "POM_XML",
+          "template": "client-pom.ftl"
+        },
+        {
+          "type": "DIRECTORY",
+          "name": "src",
+          "directory-type": "NORMAL",
+          "children": [
+            {
+              "type": "DIRECTORY",
+              "name": "main",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE",
+                      "children": [
+                        {
+                          "type": "DIRECTORY",
+                          "name": "api",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "dto",
+                          "directory-type": "NORMAL",
+                          "children": [
+                            {
+                              "type": "DIRECTORY",
+                              "name": "cmd",
+                              "directory-type": "NORMAL"
+                            },
+                            {
+                              "type": "DIRECTORY",
+                              "name": "data",
+                              "directory-type": "NORMAL"
+                            },
+                            {
+                              "type": "DIRECTORY",
+                              "name": "event",
+                              "directory-type": "NORMAL"
+                            },
+                            {
+                              "type": "DIRECTORY",
+                              "name": "query",
+                              "directory-type": "NORMAL"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "FILE",
+                          "name": "ErrorCode.java",
+                          "file-type": "JAVA_SOURCE",
+                          "template": "error-code-java.ftl"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "DIRECTORY",
+                  "name": "resources",
+                  "directory-type": "NORMAL"
+                }
+              ]
+            },
+            {
+              "type": "DIRECTORY",
+              "name": "test",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "DIRECTORY",
+      "name": "${root.artifact.id}-adapter",
+      "directory-type": "MODULE_ROOT",
+      "children": [
+        {
+          "type": "FILE",
+          "name": "pom.xml",
+          "file-type": "POM_XML",
+          "template": "adapter-pom.ftl"
+        },
+        {
+          "type": "DIRECTORY",
+          "name": "src",
+          "directory-type": "NORMAL",
+          "children": [
+            {
+              "type": "DIRECTORY",
+              "name": "main",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE",
+                      "children": [
+                        {
+                          "type": "DIRECTORY",
+                          "name": "mobile",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "wap",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "web",
+                          "directory-type": "NORMAL",
+                          "children": [
+                            {
+                              "type": "DIRECTORY",
+                              "name": "converter",
+                              "directory-type": "NORMAL"
+                            },
+                            {
+                              "type": "DIRECTORY",
+                              "name": "vo",
+                              "directory-type": "NORMAL"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "DIRECTORY",
+                  "name": "resources",
+                  "directory-type": "NORMAL"
+                }
+              ]
+            },
+            {
+              "type": "DIRECTORY",
+              "name": "test",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "DIRECTORY",
+      "name": "${root.artifact.id}-app",
+      "directory-type": "MODULE_ROOT",
+      "children": [
+        {
+          "type": "FILE",
+          "name": "pom.xml",
+          "file-type": "POM_XML",
+          "template": "app-pom.ftl"
+        },
+        {
+          "type": "DIRECTORY",
+          "name": "src",
+          "directory-type": "NORMAL",
+          "children": [
+            {
+              "type": "DIRECTORY",
+              "name": "main",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE",
+                      "children": [
+                        {
+                          "type": "DIRECTORY",
+                          "name": "assembler",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "executor",
+                          "directory-type": "NORMAL",
+                          "children": [
+                            {
+                              "type": "DIRECTORY",
+                              "name": "query",
+                              "directory-type": "NORMAL"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "event",
+                          "directory-type": "NORMAL",
+                          "children": [
+                            {
+                              "type": "DIRECTORY",
+                              "name": "handler",
+                              "directory-type": "NORMAL"
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "DIRECTORY",
+                  "name": "resources",
+                  "directory-type": "NORMAL"
+                }
+              ]
+            },
+            {
+              "type": "DIRECTORY",
+              "name": "test",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "DIRECTORY",
+      "name": "${root.artifact.id}-domain",
+      "directory-type": "MODULE_ROOT",
+      "children": [
+        {
+          "type": "FILE",
+          "name": "pom.xml",
+          "file-type": "POM_XML",
+          "template": "domain-pom.ftl"
+        },
+        {
+          "type": "DIRECTORY",
+          "name": "src",
+          "directory-type": "NORMAL",
+          "children": [
+            {
+              "type": "DIRECTORY",
+              "name": "main",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE",
+                      "children": [
+                        {
+                          "type": "DIRECTORY",
+                          "name": "ability",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "bo",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "gateway",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "module",
+                          "directory-type": "NORMAL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "DIRECTORY",
+                  "name": "resources",
+                  "directory-type": "NORMAL"
+                }
+              ]
+            },
+            {
+              "type": "DIRECTORY",
+              "name": "test",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "DIRECTORY",
+      "name": "${root.artifact.id}-infrastructure",
+      "directory-type": "MODULE_ROOT",
+      "children": [
+        {
+          "type": "FILE",
+          "name": "pom.xml",
+          "file-type": "POM_XML",
+          "template": "infrastructure-pom.ftl"
+        },
+        {
+          "type": "DIRECTORY",
+          "name": "src",
+          "directory-type": "NORMAL",
+          "children": [
+            {
+              "type": "DIRECTORY",
+              "name": "main",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE",
+                      "children": [
+                        {
+                          "type": "DIRECTORY",
+                          "name": "common",
+                          "directory-type": "NORMAL",
+                          "children": [
+                            {
+                              "type": "DIRECTORY",
+                              "name": "exception",
+                              "directory-type": "NORMAL"
+                            },
+                            {
+                              "type": "FILE",
+                              "name": "BaseDO.java",
+                              "file-type": "JAVA_SOURCE",
+                              "template": "base-do-java.ftl"
+                            }
+                          ]
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "config",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "converter",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "event",
+                          "directory-type": "NORMAL"
+                        },
+                        {
+                          "type": "DIRECTORY",
+                          "name": "gatewayimpl",
+                          "directory-type": "NORMAL"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "DIRECTORY",
+                  "name": "resources",
+                  "directory-type": "NORMAL"
+                }
+              ]
+            },
+            {
+              "type": "DIRECTORY",
+              "name": "test",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "DIRECTORY",
+      "name": "${root.artifact.id}-start",
+      "directory-type": "MODULE_ROOT",
+      "children": [
+        {
+          "type": "FILE",
+          "name": "pom.xml",
+          "file-type": "POM_XML",
+          "template": "start-pom.ftl"
+        },
+        {
+          "type": "DIRECTORY",
+          "name": "src",
+          "directory-type": "NORMAL",
+          "children": [
+            {
+              "type": "DIRECTORY",
+              "name": "main",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE",
+                      "children": [
+                        {
+                          "type": "FILE",
+                          "name": "Application.java",
+                          "file-type": "JAVA_SOURCE",
+                          "template": "application-java.ftl"
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "DIRECTORY",
+                  "name": "resources",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "logback",
+                      "directory-type": "NORMAL",
+                      "children": [
+                        {
+                          "type": "FILE",
+                          "name": "logback-local.xml",
+                          "file-type": "POM_XML",
+                          "template": "logback-local.ftl"
+                        },
+                        {
+                          "type": "FILE",
+                          "name": "logback-prod.xml",
+                          "file-type": "POM_XML",
+                          "template": "logback-prod.ftl"
+                        }
+                      ]
+                    },
+                    {
+                      "type": "FILE",
+                      "name": "application.yaml",
+                      "file-type": "YAML",
+                      "template": "application-yaml.ftl"
+                    },
+                    {
+                      "type": "FILE",
+                      "name": "application-local.yaml",
+                      "file-type": "YAML",
+                      "template": "application-local-yaml.ftl"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "DIRECTORY",
+              "name": "test",
+              "directory-type": "NORMAL",
+              "children": [
+                {
+                  "type": "DIRECTORY",
+                  "name": "java",
+                  "directory-type": "NORMAL",
+                  "children": [
+                    {
+                      "type": "DIRECTORY",
+                      "name": "${package}",
+                      "directory-type": "PACKAGE"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "FILE",
+      "name": "pom.xml",
+      "file-type": "POM_XML",
+      "template": "pom.ftl"
+    }
+  ]
+}
