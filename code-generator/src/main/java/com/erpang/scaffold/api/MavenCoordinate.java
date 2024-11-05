@@ -1,5 +1,6 @@
 package com.erpang.scaffold.api;
 
+import com.alibaba.fastjson.annotation.JSONField;
 import lombok.Data;
 import org.springframework.util.StringUtils;
 
@@ -12,6 +13,9 @@ public class MavenCoordinate {
     private String groupId;
     private String artifactId;
     private String version;
+    private String configTemplate;
+    private String summary;
+    private String description;
 
     private String toUnderline(String source) {
         if (StringUtils.hasText(source)) {

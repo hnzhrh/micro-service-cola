@@ -1,12 +1,15 @@
 package com.erpang.scaffold.controller;
 
+import com.erpang.scaffold.api.DependenceConfig;
 import com.erpang.scaffold.api.GenerateParam;
 import com.erpang.scaffold.service.GenerateArchetypeImpl;
-import com.erpang.scaffold.service.handler.GeneratorStrategyI;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @author erpang
@@ -17,9 +20,14 @@ public class GeneratorController {
     @Autowired
     private GenerateArchetypeImpl generateArchetype;
 
-    @GetMapping("/hi")
-    public String sayHi(@RequestBody GenerateParam param) {
+    @PostMapping("/generate")
+    public void generate(@RequestBody GenerateParam param) {
         generateArchetype.generate(param);
-        return "hi";
+    }
+
+    @GetMapping("/dependencies")
+    public List<DependenceConfig> getDependencies() {
+        List<DependenceConfig> config = generateArchetype.getConfig();
+        return config;
     }
 }

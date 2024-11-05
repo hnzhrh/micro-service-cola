@@ -1,0 +1,74 @@
+[
+  {
+    "category": {
+      "summary": "Datasource",
+      "description": "Detail description"
+    },
+    "dependencies": [
+      {
+        "groupId": "com.baomidou",
+        "artifactId": "mybatis-plus-spring-boot3-starter",
+        "version": "3.5.7",
+        "configTemplate": "XXX.ftl",
+        "summary": "MyBatis plus",
+        "description": "MyBatis plus desc."
+      },
+      {
+        "groupId": "mysql",
+        "artifactId": "mysql-connector-java",
+        "version": "8.0.26",
+        "configTemplate": "",
+        "summary": "MySQL connector.",
+        "description": "MySQL connector desc."
+      },
+      {
+        "groupId": "org.redisson",
+        "artifactId": "redisson-spring-boot-starter",
+        "version": "3.37.0",
+        "configTemplate": "",
+        "summary": "Redis",
+        "description": "Redisson."
+      }
+    ]
+  },
+  {
+    "category": {
+      "summary": "Config & Discovery",
+      "description": "Config and discovery"
+    },
+    "dependencies": [
+      {
+        "groupId": "com.alibaba.cloud",
+        "artifactId": "spring-cloud-starter-alibaba-nacos-config",
+        "version": "2023.0.1.0",
+        "configTemplate": "XXX.ftl",
+        "summary": "Nacos config",
+        "description": "Nacos config."
+      },
+      {
+        "groupId": "com.alibaba.cloud",
+        "artifactId": "spring-cloud-starter-alibaba-nacos-discovery",
+        "version": "2023.0.1.0",
+        "configTemplate": "XXX.ftl",
+        "summary": "Nacos discovery",
+        "description": "Nacos discovery."
+      }
+    ]
+  },
+  {
+    "category": {
+      "summary": "Message Queue",
+      "description": "Message queue."
+    },
+    "dependencies": [
+      {
+        "groupId": "com.alibaba.cloud",
+        "artifactId": "spring-cloud-starter-stream-rocketmq",
+        "version": "2023.0.1.0",
+        "configTemplate": "XXX.ftl",
+        "summary": "Rocket MQ",
+        "description": "Rocket MQ."
+      }
+    ]
+  }
+]

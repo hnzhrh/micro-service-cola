@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Configuration</title>
+  <style>
+    /* 全局样式 */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      color: #333;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background-color: #f5f5f5;
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 1.5rem;
+      color: #4a90e2;
+      text-align: center;
+    }
+
+    /* 表单样式 */
+    #projectForm {
+      width: 100%;
+      max-width: 400px;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    #projectForm div {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 8px;
+      font-size: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      transition: border-color 0.3s ease;
+    }
+
+    input[type="text"]:focus {
+      border-color: #4a90e2;
+      outline: none;
+    }
+
+    .error {
+      color: #e74c3c;
+      font-size: 0.85rem;
+      margin-top: 5px;
+    }
+
+    /* 依赖项组样式 */
+    .dependencies {
+      margin-top: 20px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background-color: #fafafa;
+    }
+
+    .dependencies h3 {
+      font-size: 1.2rem;
+      color: #4a90e2;
+      margin-bottom: 10px;
+    }
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    legend {
+      font-size: 1rem;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 8px;
+    }
+
+    label {
+      display: flex;
+      align-items: center;
+      font-weight: normal;
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2);
+      accent-color: #4a90e2;
+    }
+
+    /* 按钮样式 */
+    button {
+      width: 48%;
+      padding: 10px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #ffffff;
+      background-color: #4a90e2;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #357abd;
+    }
+
+    button[type="button"]:nth-child(2) {
+      background-color: #e74c3c;
+      margin-left: 4%;
+    }
+
+    button[type="button"]:nth-child(2):hover {
+      background-color: #c0392b;
+    }
+
+    /* 响应式布局 */
+    @media (max-width: 480px) {
+      #projectForm {
+        width: 90%;
+        padding: 15px;
+      }
+
+      button {
+        width: 100%;
+        margin: 5px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!--<h2>Project Configuration</h2>-->
+<form id="projectForm">
+  <div>
+    <label>Author:
+      <input type="text" id="author"/>
+    </label>
+    <span class="error" id="errorAuthor"></span>
+  </div>
+  <div>
+    <label>Architecture:
+      <input type="text" id="appArchitecture" value="cola" readonly />
+    </label>
+    <span class="error" id="errorAppArchitecture"></span>
+  </div>
+  <div>
+    <label>Project Name:
+      <input type="text" id="projectName" required />
+    </label>
+    <span class="error" id="errorProjectName"></span>
+  </div>
+  <div>
+    <label>Group Id:
+      <input type="text" id="groupId" required />
+    </label>
+    <span class="error" id="errorGroupId"></span>
+  </div>
+  <div>
+    <label>Artifact Id:
+      <input type="text" id="artifactId" required />
+    </label>
+    <span class="error" id="errorArtifactId"></span>
+  </div>
+  <div>
+    <label>Package:
+      <input type="text" id="package" required />
+    </label>
+    <span class="error" id="errorPackage"></span>
+  </div>
+  <div>
+    <label>Version:
+      <input type="text" id="version" value="1.0.0" required />
+    </label>
+    <span class="error" id="errorVersion"></span>
+  </div>
+
+  <div class="dependencies" id="dependenciesContainer">
+    <h3>Dependencies</h3>
+  </div>
+
+  <button type="button" onclick="handleSubmit()">Submit</button>
+  <button type="button" onclick="handleReset()">Reset</button>
+</form>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch('/dependencies')
+            .then(response => response.json())
+            .then(data => renderDependencies(data))
+            .catch(error => console.error('Failed to fetch dependencies', error));
+  });
+
+  function renderDependencies(dependencyGroups) {
+    const container = document.getElementById('dependenciesContainer');
+    dependencyGroups.forEach(group => {
+      const fieldset = document.createElement('fieldset');
+      const legend = document.createElement('legend');
+      legend.textContent = group.category.summary;
+      fieldset.appendChild(legend);
+
+      group.dependencies.forEach(dependency => {
+        const label = document.createElement('label');
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.classList.add('dependencyCheckbox');
+
+        checkbox.dataset.groupId = dependency.groupId;
+        checkbox.dataset.artifactId = dependency.artifactId;
+        checkbox.dataset.version = dependency.version;
+        checkbox.dataset.configTemplate = dependency.configTemplate;
+        checkbox.dataset.summary = dependency.summary;
+        checkbox.dataset.description = dependency.description;
+
+        label.appendChild(checkbox);
+        label.appendChild(document.createTextNode(dependency.summary));
+        fieldset.appendChild(label);
+      });
+
+      container.appendChild(fieldset);
+    });
+  }
+
+  function validateForm() {
+    const formFields = ['projectName', 'groupId', 'artifactId', 'package', 'version'];
+    let isValid = true;
+    formFields.forEach(field => {
+      const input = document.getElementById(field);
+      const errorSpan = document.getElementById(`error${field.charAt(0).toUpperCase() + field.slice(1)}`);
+      if (!input.value.trim()) {
+        errorSpan.textContent = 'This field is required';
+        isValid = false;
+      } else {
+        errorSpan.textContent = '';
+      }
+    });
+    return isValid;
+  }
+
+  function handleSubmit() {
+    if (!validateForm()) return;
+
+    const payload = {
+      author: document.getElementById('author').value,
+      appArchitecture: document.getElementById('appArchitecture').value,
+      projectName: document.getElementById('projectName').value,
+      groupId: document.getElementById('groupId').value,
+      artifactId: document.getElementById('artifactId').value,
+      packageName: document.getElementById('package').value,
+      version: document.getElementById('version').value,
+      dependencies: Array.from(document.querySelectorAll('.dependencyCheckbox:checked')).map(cb => ({
+        groupId: cb.dataset.groupId,
+        artifactId: cb.dataset.artifactId,
+        version: cb.dataset.version,
+        configTemplate: cb.dataset.configTemplate,
+        summary: cb.dataset.summary,
+        description: cb.dataset.description
+      }))
+    };
+    console.log('Submitting payload:', payload);
+    // 提交逻辑：可以在此处使用 fetch 或其他方式将 payload 发送到后端
+    fetch('/generate', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(payload) });
+  }
+
+  function handleReset() {
+    document.getElementById('projectForm').reset();
+    document.querySelectorAll('.dependencyCheckbox').forEach(cb => cb.checked = false);
+    document.querySelectorAll('.error').forEach(error => error.textContent = '');
+  }
+</script>
+
+</body>
+</html>

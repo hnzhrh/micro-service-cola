@@ -154,11 +154,11 @@ mvn archetype:generate -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion
 - [x] Init the project module
 - [x] Integrate Spring Boot
 - [x] Integrate COLA
-- [ ] Integrate middleware
+- [x] Integrate middleware
   - [x] MySQL
   - [x] Redis
   - [x] RocketMQ
-- [ ] Integrate Spring cloud alibaba.
+- [x] Integrate Spring cloud alibaba.
   - [x] Nacos
     - [x] Config
     - [x] Discovery
@@ -173,6 +173,13 @@ mvn archetype:generate -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion
   - [ ] Skywalking
 - [ ] Integrate development tools
   - [x] Swagger and Knife4j
+- [ ] Generator
+  - [x] Maven archetype
+  - [ ] Generator
+    - [x] Implement a JSON-configurable strategy for generating directory structures.
+    - [ ] Implement a configurable strategy for generating template files.
+    - [ ] Support more archetype.
+    - [ ] File download.
 
 See the [open issues](https://github.com/hnzhrh/micro-service-cola/issues) for a full list of proposed features (and known issues).
 

@@ -6,4 +6,4 @@ spring:
   freemarker:
     template-loader-path: classpath:/
 unique-prefix: AbcDeF
-work-dir: D:\JavaProjects\micro-service-cola\generator-test\
+work-dir: D:\JavaProjects\micro-service-cola\generator-output\

@@ -34,7 +34,7 @@
     </root>
 
     <!--Application log-->
-    <logger name="${r'com.erpang.scaffold'}" level="DEBUG"/>
+    <logger name="${package}" level="DEBUG"/>
 
     <!--Datasource log-->
     <logger name="com.apache.ibatis" level="TRACE" additivity="false">
