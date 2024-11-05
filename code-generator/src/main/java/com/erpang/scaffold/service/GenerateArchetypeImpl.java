@@ -17,7 +17,7 @@ import java.util.List;
  */
 @Service
 public class GenerateArchetypeImpl implements GeneratorArchetypeI {
-    @Value("${work-dir}")
+    @Value("${output-dir}")
     private String rootDir;
 
     @Autowired

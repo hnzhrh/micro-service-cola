@@ -134,13 +134,27 @@ Now you can use this archetype to create the new project.
 <!-- USAGE EXAMPLES -->
 ## Usage
 
+There are two methods for generating the archetype:
+1. Using the Maven Archetype Plugin.
+2. Through the web user interface (UI).
+
+### Using the Maven Archetype Plugin.
+
 Before creating your project, please replace `${groupId}`, `${artifactId}`, `${package}`, and `${version}` with your own values.
 
 ```shell
 mvn archetype:generate -DgroupId=${groupId} -DartifactId=${artifactId} -Dversion=1.0.0 -Dpackage=${package} -DarchetypeArtifactId=micro-service-cola-archetype -DarchetypeGroupId=com.erpang.scaffold -DarchetypeVersion=1.0.0 -DarchetypeCatalog=local
 ```
 
+### Through the web user interface (UI).
 
+1. Go to [directory](./code-generator/src/main/resources)
+2. Config the `output-dir` in `application.yaml`
+   ```yaml
+   output-dir: Your output dir path.
+   ```
+3. Run the application.
+4. Go to [http://localhost:8180](http://localhost:8180) 
 
 [//]: # (_For more examples, please refer to the [Documentation]&#40;https://example.com&#41;_)
 
