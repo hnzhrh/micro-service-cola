@@ -48,27 +48,27 @@
         <dependencies>
             <!--Project modules-->
             <dependency>
-                <groupId>com.erpang.scaffold</groupId>
+                <groupId>${root_group_id}</groupId>
                 <artifactId>${root_artifact_id}-adapter</artifactId>
                 <version>${r'${project.version}'}</version>
             </dependency>
             <dependency>
-                <groupId>com.erpang.scaffold</groupId>
+                <groupId>${root_group_id}</groupId>
                 <artifactId>${root_artifact_id}-app</artifactId>
                 <version>${r'${project.version}'}</version>
             </dependency>
             <dependency>
-                <groupId>com.erpang.scaffold</groupId>
+                <groupId>${root_group_id}</groupId>
                 <artifactId>${root_artifact_id}-client</artifactId>
                 <version>${r'${project.version}'}</version>
             </dependency>
             <dependency>
-                <groupId>com.erpang.scaffold</groupId>
+                <groupId>${root_group_id}</groupId>
                 <artifactId>${root_artifact_id}-domain</artifactId>
                 <version>${r'${project.version}'}</version>
             </dependency>
             <dependency>
-                <groupId>com.erpang.scaffold</groupId>
+                <groupId>${root_group_id}</groupId>
                 <artifactId>${root_artifact_id}-infrastructure</artifactId>
                 <version>${r'${project.version}'}</version>
             </dependency>

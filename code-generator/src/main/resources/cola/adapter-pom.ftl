@@ -21,7 +21,7 @@
     <dependencies>
         <!--Module dependencies-->
         <dependency>
-            <groupId>com.erpang.scaffold</groupId>
+            <groupId>${root_group_id}</groupId>
             <artifactId>${root_artifact_id}-app</artifactId>
         </dependency>
         <!--Module dependencies end-->

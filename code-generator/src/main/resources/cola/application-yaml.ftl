@@ -4,7 +4,7 @@ spring:
   profiles:
     active: local
   application:
-    name: micro-service-cola
+    name: ${project_name}
 logging:
   config: classpath:logback/logback-${r'${spring.profiles.active}'}.xml
 # springdoc-openapi config
