@@ -36,6 +36,14 @@
             <artifactId>cola-component-catchlog-starter</artifactId>
         </dependency>
         <!--COLA end-->
+
+        <!--Misc-->
+        <!-- For cola-component-catchlog-starter-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+        <!--Misc end-->
     </dependencies>
 
 </project>

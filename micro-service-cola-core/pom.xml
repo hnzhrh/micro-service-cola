@@ -29,6 +29,7 @@
         <mysql-connect-java.version>8.0.26</mysql-connect-java.version>
         <redisson-spring-boot-starter.version>3.37.0</redisson-spring-boot-starter.version>
         <knife4j.version>4.4.0</knife4j.version>
+        <fastjson.version>1.2.83</fastjson.version>
     </properties>
 
     <dependencies>
@@ -139,6 +140,14 @@
                 <version>${knife4j.version}</version>
             </dependency>
             <!--Knife4j end-->
+
+            <!--Misc-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!--Misc end-->
         </dependencies>
     </dependencyManagement>
 
