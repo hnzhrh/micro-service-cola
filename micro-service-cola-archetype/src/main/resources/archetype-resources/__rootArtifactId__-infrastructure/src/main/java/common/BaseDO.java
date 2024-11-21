@@ -6,7 +6,7 @@ package ${package}.common;
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.Data;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 /**
  * @author erpang
@@ -18,10 +18,10 @@ public class BaseDO {
     private Long id;
 
     @TableField(value = "gmt_create", fill = FieldFill.INSERT)
-    private LocalDate gmtCreate;
+    private LocalDateTime gmtCreate;
 
     @TableField(value = "gmt_modified", fill = FieldFill.INSERT_UPDATE)
-    private LocalDate gmtModified;
+    private LocalDateTime gmtModified;
 
     @TableField("creator")
     private String creator;
@@ -29,7 +29,7 @@ public class BaseDO {
     @TableField("modifier")
     private String modifier;
 
-    @TableField("is_deleted")
+    @TableField("deleted")
     @TableLogic
-    private Boolean isDeleted;
+    private Boolean deleted;
 }
