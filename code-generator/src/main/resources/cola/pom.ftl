@@ -127,7 +127,7 @@
             <!--MySQL driver end-->
 
             </#if>
-            <#if org_redisso?has_content && redisson_spring_boot_starter?has_content>
+            <#if org.redisson?has_content && redisson_spring_boot_starter?has_content>
             <!--Redis-->
             <dependency>
                 <groupId>org.redisson</groupId>
