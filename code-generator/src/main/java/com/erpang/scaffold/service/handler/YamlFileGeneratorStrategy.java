@@ -43,6 +43,7 @@ public class YamlFileGeneratorStrategy extends AbstractFileGeneratorStrategy {
         variables.put("root_group_id", param.getGroupId());
         variables.put("root_version", param.getVersion());
         variables.put("package", param.getPackageName());
+        variables.put("project_name", param.getProjectName());
         // Handle dependencies
         for (MavenCoordinate dependency : param.getDependencies()) {
             variables.put(dependency.getUnderlineGroupId(), Boolean.TRUE);

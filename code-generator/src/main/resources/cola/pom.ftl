@@ -127,7 +127,7 @@
             <!--MySQL driver end-->
 
             </#if>
-            <#if org.redisson?has_content && redisson_spring_boot_starter?has_content>
+            <#if org_redisson?has_content && redisson_spring_boot_starter?has_content>
             <!--Redis-->
             <dependency>
                 <groupId>org.redisson</groupId>
@@ -149,7 +149,7 @@
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
+                <version>${r'${fastjson.version}'}</version>
             </dependency>
             <!--Misc end-->
         </dependencies>
